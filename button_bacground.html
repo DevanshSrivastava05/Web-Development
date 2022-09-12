@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>
+        Changing background colour?
+    </title>
+    <style>
+        .horizontal-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="horizontal-center">
+        <div class="vertical-center">
+
+        <button onclick="Run()">
+            Click Here
+        </button>
+        </div>
+    </div>
+
+    <script>
+
+        var str = "Click on button to change the background color";
+
+        el_up.innerHTML = str;
+
+        function changeColor(color) {
+            document.body.style.background = color;
+        }
+
+        function Run() {
+            changeColor('cyan');
+        }         
+    </script>
+
+</body>
+
+</html>

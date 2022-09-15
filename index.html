@@ -5,43 +5,40 @@
         Changing background colour?
     </title>
     <style>
-        .horizontal-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .vertical-center {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-        }
+      
     </style>
 
 </head>
 
 <body>
-    <div class="horizontal-center">
-        <div class="vertical-center">
-            <button id="btn">Click To Change The Colour Of Background> 
+    <style>
+        .container{
+            position:relative;
+            top:50%;
+            left:50%;
+            border:none;
+
+        }
+    </style>
+    <div class="container">
+        <button id="btn">Click Me To Change The Colour Of Background
         </button>
-        </div>
     </div>
+   
 
     <script>
-        a button=document.getElementById("btn");
-        a body=document.body;
-        a colours=["red","green","cyan","Lavender","orange","blue","purple","Aquamarine","Beige","Chocolate"]
-        body.style.backgroundcolor=colours[3]
-        button.addEventListener("click",changeBackground)
-        function changeBackground(){
-            a color=Math.floor(Math.random()*colours.length)
-            body.style.backgroundcolor=colours[color]
+        const btn=document.getElementById("btn");
+        const body=document.body;
+        const colors=["LightSalmon","green","cyan","Lavender","orange","blue","Maroon","Aquamarine","Beige","Chocolate","Orchid"];
+        body.style.backgroundColor=colors[2]
+        btn.addEventListener("click",changeBackground)
+        function changeBackground()
+        {
+            const colorindex=colors[Math.floor(Math.random()*colors.length)];
+            document.body.style.background=colorindex;
+
+        };
         
-        }
 
                  
     </script>

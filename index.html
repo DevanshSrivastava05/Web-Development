@@ -26,26 +26,24 @@
 <body>
     <div class="horizontal-center">
         <div class="vertical-center">
-
-        <button onclick="Run()">
-            Click Here
+            <button id="btn">Click To Change The Colour Of Background> 
         </button>
         </div>
     </div>
 
     <script>
-
-        var str = "Click on button to change the background color";
-
-        el_up.innerHTML = str;
-
-        function changeColor(color) {
-            document.body.style.background = color;
+        a button=document.getElementById("btn");
+        a body=document.body;
+        a colours=["red","green","cyan","Lavender","orange","blue","purple","Aquamarine","Beige","Chocolate"]
+        body.style.backgroundcolor=colours[3]
+        button.addEventListener("click",changeBackground)
+        function changeBackground(){
+            a color=Math.floor(Math.random()*colours.length)
+            body.style.backgroundcolor=colours[color]
+        
         }
 
-        function Run() {
-            changeColor('cyan');
-        }         
+                 
     </script>
 
 </body>

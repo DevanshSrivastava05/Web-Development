@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>
+        Changing background colour?
+    </title>
+    <style>
+      
+    </style>
+
+</head>
+
+<body>
+    <style>
+        .container{
+            text-align:center;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding:13px;
+            font-size:15px;
+
+        }
+    </style>
+    <div class="container">
+        <button id="btn">Click Me To Change The Colour Of Background
+        </button>
+    </div>
+   
+
+    <script>
+        const btn=document.getElementById("btn");
+        const body=document.body;
+        const colors=["LightSalmon","green","cyan","Lavender","orange","blue","Maroon","Aquamarine","Beige","Chocolate","Orchid"];
+        body.style.backgroundColor=colors[2]
+        btn.addEventListener("click",changeBackground)
+        function changeBackground()
+        {
+            const colorindex=colors[Math.floor(Math.random()*colors.length)];
+            document.body.style.background=colorindex;
+
+        };
+        
+
+                 
+    </script>
+
+</body>
+
+</html>
